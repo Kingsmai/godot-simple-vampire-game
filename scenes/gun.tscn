@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://o5lviqsdl5tn"]
 
-[ext_resource type="Script" path="res://gun.gd" id="1_14uyt"]
+[ext_resource type="Script" path="res://scenes/gun.gd" id="1_14uyt"]
 [ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://pistol/pistol.png" id="1_rynir"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rqkn4"]

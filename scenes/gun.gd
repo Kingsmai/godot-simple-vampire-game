@@ -1,6 +1,6 @@
 extends Area2D
 
-const BULLET = preload("res://bullet.tscn")
+const BULLET = preload("res://scenes/bullet.tscn")
 
 func _physics_process(delta: float) -> void:
 	var enemies_in_range : Array[Node2D] = get_overlapping_bodies()

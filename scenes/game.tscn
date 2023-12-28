@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbtad47aqq5kn"]
 
-[ext_resource type="PackedScene" uid="uid://ch2wk62niuccr" path="res://player.tscn" id="1_66oso"]
-[ext_resource type="PackedScene" uid="uid://c3r36gc2o42t" path="res://pine_tree.tscn" id="2_l34g8"]
-[ext_resource type="PackedScene" uid="uid://dpktooae1s1wh" path="res://mob.tscn" id="3_5a8la"]
+[ext_resource type="PackedScene" uid="uid://ch2wk62niuccr" path="res://scenes/player.tscn" id="1_66oso"]
+[ext_resource type="PackedScene" uid="uid://c3r36gc2o42t" path="res://scenes/pine_tree.tscn" id="2_l34g8"]
+[ext_resource type="PackedScene" uid="uid://dpktooae1s1wh" path="res://scenes/mob.tscn" id="3_5a8la"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
