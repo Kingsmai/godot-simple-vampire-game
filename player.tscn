@@ -7,6 +7,7 @@
 radius = 32.0
 
 [node name="Player" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_todro")
 
 [node name="HappyBoo" parent="." instance=ExtResource("1_mhqlh")]
