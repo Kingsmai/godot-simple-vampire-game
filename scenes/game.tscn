@@ -21,6 +21,34 @@ layer = -1
 offset_right = 1280.0
 offset_bottom = 720.0
 
+[node name="GameOverScreen" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.392157)
+
+[node name="GameOverLabel" type="Label" parent="GameOverScreen/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -11.5
+offset_right = 46.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 88
+text = "GAME OVER"
+
 [node name="Player" parent="." instance=ExtResource("1_66oso")]
 position = Vector2(640, 360)
 
@@ -31,6 +59,9 @@ curve = SubResource("Curve2D_jrwt0")
 [node name="EnemySpawnPoint" type="PathFollow2D" parent="Player/Path2D"]
 unique_name_in_owner = true
 position = Vector2(-64, -64)
+
+[node name="MobSpawnTimer" type="Timer" parent="Player/Path2D"]
+autostart = true
 
 [node name="PineTree" parent="." instance=ExtResource("2_l34g8")]
 position = Vector2(226, 116)
@@ -47,7 +78,5 @@ position = Vector2(1004, 212)
 [node name="PineTree4" parent="." instance=ExtResource("2_l34g8")]
 position = Vector2(1087, 257)
 
-[node name="MobSpawnTimer" type="Timer" parent="."]
-autostart = true
-
-[connection signal="timeout" from="MobSpawnTimer" to="." method="_on_mob_spawn_timer_timeout"]
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="Player/Path2D/MobSpawnTimer" to="." method="_on_mob_spawn_timer_timeout"]
