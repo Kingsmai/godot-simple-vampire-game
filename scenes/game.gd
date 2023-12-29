@@ -15,6 +15,10 @@ const CHUNK_SIZE = Vector2i(1280, 720)
 var loaded_chunks : Array[Vector2i] = []
 
 
+func _ready() -> void:
+	load_chunk()
+
+
 # 生成敌人函数
 func spawn_mob():
 	var new_mob = MOB.instantiate()
