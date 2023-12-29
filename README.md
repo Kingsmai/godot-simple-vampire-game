@@ -24,7 +24,7 @@ git clone https://github.com/Kingsmai/godot-simple-vampire-game.git
 
 ## Roadmap
 
-- [ ] Procedural tree spawn
+- [x] Procedural tree spawn
 - [ ] Score system
 - [ ] Player upgrades
 - [ ] More UI
